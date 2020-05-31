@@ -28,7 +28,7 @@ export class HttpClientService {
   }
 
   public deleteEmployee(employee) {
-    return this.httpClient.delete<Employee>("http://localhost:9080/SpringBootHW/employees" + "/"+ employee.empId);
+    return this.httpClient.delete<Employee>("http://localhost:9080/SpringBootHW" + "/"+ employee.empId);
   }
 
   public createEmployee(employee) {

@@ -7,6 +7,10 @@
     </tr>
   </thead>
   <tbody>
+    <div *ngIf="!employees || employees.length === 0">
+      <p>Nothing to delete</p> <a  routerLink="/addemployee" class="nav-link">Add New Employee</a>
+
+  </div>
       <tr *ngFor="let employee of employees">
           <td>{{employee.name}}</td>
           <td>{{employee.designation}}</td>
