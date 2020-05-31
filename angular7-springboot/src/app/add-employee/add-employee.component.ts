@@ -9,6 +9,7 @@ import { HttpClientService, Employee } from '../service/http-client.service';
 export class AddEmployeeComponent implements OnInit {
 
   user: Employee = new Employee("","","","");
+  message : string;
 
   constructor(
     private httpClientService: HttpClientService
@@ -20,7 +21,7 @@ export class AddEmployeeComponent implements OnInit {
   createEmployee(): void {
     this.httpClientService.createEmployee(this.user)
         .subscribe( data => {
-          alert("Employee created successfully.");
+          this.message = "Employee "+this.user.name+ " created successfully.";
         });
 
   };

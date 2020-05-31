@@ -1,6 +1,10 @@
 <div class="col-md-6">
   <h2 class="text-center">Add Employee</h2>
 <form>
+  <div *ngIf="message!=null">
+    <p><font color=green>{{message}}</font></p>
+
+</div>
   <div class="form-group">
     <label for="name">Name:</label>
     <input type="name" [(ngModel)]="user.name" placeholder="Name" name="name" class="form-control" id="name">
